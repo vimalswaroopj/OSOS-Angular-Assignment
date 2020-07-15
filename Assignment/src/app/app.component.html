@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Side Menu</title>
+  <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" (click)="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+  </nav>
+
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" (click)="closeSlideMenu()">&times;</a>
+    <a href="#" (click)="addButton()">Add day</a>
+  </div>
+
+  <div id="main">
+    <h1>Todo List</h1>
+  </div>
+  <div class="create-list" id="todos">
+    <div class="enter-task">
+    <input id="todo-name" type="text" placeholder="Enter task here">
+    <button id="add" (click)="addItems()">+</button>
+    
+  </div>
+  <div id="list">
+
+  </div>
+  </div>
+
+</body>
+</html>
+<router-outlet></router-outlet>
