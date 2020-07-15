@@ -5,9 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class TodoListService {
   num = {
-    "1" : {
-        1 : 1,
-    },
+    1 : [1]
 
   };
   constructor() { }
